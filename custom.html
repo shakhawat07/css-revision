@@ -6,12 +6,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Property</title>
+    <style>
+        :root {
+            --side-width: 200px;
+            --main-color: orange;
+            --dark-border: 1px solid black;
+        }
+
+        h1 {
+            color: plum;
+        }
+
+        h2 {
+            color: var(--main-color);
+        }
+
+        p {
+            color: plum;
+            border: var(--dark-border);
+        }
+
+        footer {
+            clear: both;
+            border: var(--dark-border);
+        }
+
+        .side-nav,
+        .blogs {
+            float: left;
+            height: 500px;
+        }
+
+        .side-nav {
+            background-color: green;
+            width: var(--side-width);
+        }
+
+        .blogs {
+            background-color: greenyellow;
+            width: calc(100% - 2*var(--side-width));
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <header>I am exploring Custom Property</header>
+        <header>
+            <h1>I am exploring Custom Property</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, dolor!</p>
+        </header>
+        <main>
+            <h1>Abcdefghij</h1>
+            <h2>Custom Property</h2>
+
+            <section>
+                <aside class="side-nav">Side Navigation</aside>
+                <div class="blogs">
+                    <h4>Blogs</h4>
+                </div>
+            </section>
+        </main>
     </header>
+    <footer><small>@Copyright</small></footer>
 </body>
 
 </html>
